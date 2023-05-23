@@ -31,7 +31,25 @@ export default function Home() {
           Photo credit IsaLIN_
         </Link>
       </section>
-      <section id="content"></section>
+      <section id="stories" className="px-20 py-10">
+        <h3 className="text-4xl font-bold mb-5">Let me tell you something</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ut mi
+          sed ipsum dignissim ultricies vel laoreet sem. Nulla sit amet
+          malesuada massa, eget vehicula ante. Sed mattis lacinia ultrices.
+          Suspendisse bibendum eros vitae ligula cursus, quis semper diam
+          elementum. Nulla tincidunt ex nibh, vel tincidunt ex ultricies vel.
+          Nullam rhoncus commodo eros et imperdiet. Sed quis nulla vulputate,
+          aliquam eros quis, blandit elit. Etiam consequat, eros eu maximus
+          tristique, felis urna sollicitudin risus, eget pharetra lectus mi sed
+          arcu. Morbi eget bibendum nibh. Vivamus eu faucibus neque. Aenean
+          dignissim convallis ultricies. In metus magna, consectetur vitae
+          luctus id, faucibus quis lacus. Praesent nec placerat dui. Nam in
+          mauris turpis. Curabitur ligula nibh, sagittis eget mauris eget,
+          ornare ornare metus. Mauris id justo ac ex facilisis imperdiet sed sit
+          amet metus.
+        </p>
+      </section>
       <section id="footer"></section>
     </main>
   );
