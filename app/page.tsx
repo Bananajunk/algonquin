@@ -7,10 +7,12 @@ export default function Home() {
     <main className="flex flex-col gap-4 w-screen">
       <section
         id="heading"
-        className="h-screen w-full relative flex justify-center flex-col items-center"
+        className="h-screen w-full relative flex justify-center flex-col items-center text-center"
       >
-        <h1 className="z-10 text-white text-8xl font-bold">Come at me bro</h1>
-        <h2 className="z-10 text-primary  text-4xl font-script">
+        <h1 className="z-10 p-4 text-white text-8xl font-bold uppercase">
+          Come at me bro
+        </h1>
+        <h2 className="z-10 p-4 text-primary  text-4xl font-script">
           A lifetime of experiences in algonquin park
         </h2>
         <Image
