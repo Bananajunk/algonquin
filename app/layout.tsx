@@ -1,6 +1,8 @@
 import "./globals.css";
 import { Source_Sans_Pro, Yellowtail } from "next/font/google";
 
+import Navbar from "./Navbar";
+
 const sourceSans = Source_Sans_Pro({
   weight: ["400", "700"],
   subsets: ["latin"],
@@ -27,7 +29,10 @@ export default function RootLayout({
       lang="en"
       className={`${sourceSans.variable} ${script.variable} bg-background font-source text-base`}
     >
-      <body>{children}</body>
+      <body className="relative">
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
