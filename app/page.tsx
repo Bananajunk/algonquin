@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { PhotoIcon } from "@heroicons/react/20/solid";
+import Stories from "./Stories";
+import { Suspense } from "react";
 
 export default function Home() {
   return (
@@ -31,7 +33,7 @@ export default function Home() {
           Photo credit IsaLIN_
         </Link>
       </section>
-      <section id="stories" className="px-20 py-10">
+      <section id="stories" className="p-10">
         <h3 className="text-4xl font-bold mb-5">Let me tell you something</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ut mi
@@ -49,6 +51,10 @@ export default function Home() {
           ornare ornare metus. Mauris id justo ac ex facilisis imperdiet sed sit
           amet metus.
         </p>
+        <Suspense fallback={<div>Loading...</div>}>
+          {/* @ts-expect-error Server Component */}
+          <Stories />
+        </Suspense>
       </section>
       <section id="footer"></section>
     </main>
