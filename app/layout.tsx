@@ -1,17 +1,24 @@
 import "./globals.css";
-import { Source_Sans_Pro, Yellowtail } from "next/font/google";
+import { Oswald, Source_Serif_Pro, Yellowtail } from "next/font/google";
 
 import Navbar from "./Navbar";
 
-const sourceSans = Source_Sans_Pro({
+const headings = Oswald({
   weight: ["400", "700"],
   subsets: ["latin"],
-  variable: "--font-source",
+  variable: "--font-heading",
 });
-const script = Yellowtail({
+
+const content = Source_Serif_Pro({
+  weight: ["400"],
+  subsets: ["latin"],
+  variable: "--font-content",
+});
+
+const handwriting = Yellowtail({
   weight: "400",
   subsets: ["latin"],
-  variable: "--font-script",
+  variable: "--font-handwriting",
 });
 
 export const metadata = {
@@ -27,7 +34,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${sourceSans.variable} ${script.variable} bg-background font-source text-base`}
+      className={`${headings.variable} ${content.variable} ${handwriting.variable} bg-background font-content text-base`}
     >
       <body className="relative">
         <Navbar />

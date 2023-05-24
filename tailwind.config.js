@@ -8,8 +8,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        source: ["var(--font-source)"],
-        script: ["var(--font-script)"],
+        heading: ["var(--font-heading)"],
+        content: ["var(--font-content)"],
+        handwriting: ["var(--font-handwriting)"],
       },
       colors: {
         base: "#060404",
