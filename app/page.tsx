@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import Memoir from "./Memoir";
+import Memoirs from "./Memoirs";
 import Splash from "./Splash";
 
 export default function Home() {
@@ -8,7 +8,7 @@ export default function Home() {
       <Splash />
       <Suspense fallback="Loading ...">
         {/* @ts-expect-error Server Component */}
-        <Memoir />
+        <Memoirs />
       </Suspense>
       <section id="footer"></section>
     </main>

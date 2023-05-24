@@ -1,7 +1,7 @@
-import Entry from "@/components/Entry/Entry";
+import { Entry } from "@/components";
 import { prisma } from "@/lib/prisma";
 
-const Memoir = async () => {
+const Memoirs = async () => {
   const stories = await prisma.story.findMany({
     orderBy: {
       order: "asc",
@@ -28,8 +28,9 @@ const Memoir = async () => {
             <Entry
               key={story.id}
               title={story.title}
-              timestamp={story.createdAt.toLocaleDateString()}
+              timestamp={story.createdAt}
               content={story.content}
+              href={`/memoirs/${story.id}`}
             />
           );
         })}
@@ -38,4 +39,4 @@ const Memoir = async () => {
   );
 };
 
-export default Memoir;
+export default Memoirs;

@@ -17,5 +17,5 @@ model Story {
   updatedAt DateTime @updatedAt
   title String
   content String
-  order Int @unique @default(autoincrement())
+  order Int @unique
 }
