@@ -1,0 +1,13 @@
+.Navbar {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-areas: "left center right";
+}
+
+.HomeIcon {
+  grid-area: left;
+}
+
+.NavMenu {
+  grid-area: center;
+}
