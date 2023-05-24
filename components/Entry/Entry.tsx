@@ -6,11 +6,12 @@ interface Props {
   timestamp: Date;
   content?: string;
   href?: string;
+  id?: string;
 }
 
-const Entry = ({ title, timestamp, content, href }: Props) => {
+const Entry = ({ title, timestamp, content, href, id }: Props) => {
   return (
-    <article className="grid py-2 px-8 w-full gap-4">
+    <article id={id} className="grid py-2 px-8 w-full gap-4">
       <header className="flex gap-4 mb-2 items-center">
         <h3 className="text-2xl font-heading text-accent">{title}</h3>
         <Badge>{timestamp.toDateString().split(" ").slice(1).join(" ")}</Badge>

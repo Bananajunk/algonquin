@@ -27,6 +27,7 @@ const Memoirs = async () => {
           return (
             <Entry
               key={story.id}
+              id={story.id}
               title={story.title}
               timestamp={story.createdAt}
               content={story.content}

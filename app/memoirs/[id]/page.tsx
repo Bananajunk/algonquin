@@ -1,5 +1,11 @@
-import { Signature } from "@/components";
+import { Breadcrumbs, Signature } from "@/components";
 import { prisma } from "@/lib/prisma";
+import {
+  ArrowUturnLeftIcon,
+  ChevronDoubleRightIcon,
+  ChevronLeftIcon,
+} from "@heroicons/react/24/solid";
+import Link from "next/link";
 
 interface Params {
   id: string;
@@ -14,7 +20,20 @@ const Memoir = async ({ params: { id } }: { params: Params }) => {
 
   return (
     <section className="grid gap-16">
-      <header className="grid">
+      <Breadcrumbs
+        path={[
+          { content: "Memoirs", href: "/#memoir" },
+          { content: story?.title || "" },
+        ]}
+      />
+      <header className="grid gap-1">
+        <Link
+          href={`/#${story?.id}`}
+          className="flex items-center gap-1 text-accent"
+        >
+          <ChevronLeftIcon className="w-4 h-4" />
+          Back
+        </Link>
         <h1 className="text-5xl font-heading text-accent font-bold">
           {story?.title}
         </h1>
