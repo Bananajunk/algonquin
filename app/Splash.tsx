@@ -17,7 +17,7 @@ const Splash = () => {
       <Image
         src="https://storage.googleapis.com/d42ba1b4ddfb8a90580a58367da83a83/algonquin_header.webp"
         alt="header-image"
-        className="z-0 brightness-50"
+        className="z-0 brightness-50 object-cover"
         aria-hidden
         fill
       />
