@@ -22,7 +22,7 @@ const Entry = ({ title, timestamp, content, href, id }: Props) => {
           href={href}
           className="grid gap-0 place-content-center text-accent font-heading"
         >
-          Read more
+          Read whole story
           <ChevronDoubleDownIcon className="h-4 w-4 place-self-center hover:motion-safe:animate-bounce" />
         </a>
       )}
